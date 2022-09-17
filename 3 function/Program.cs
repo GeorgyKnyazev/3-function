@@ -6,10 +6,10 @@ namespace _3_function
     {
         static void Main(string[] args)
         {
-            ReadingTheNumber();
+            ReadNumber();
         }
 
-        static void ReadingTheNumber()
+        static void ReadNumber()
         {
             bool resultOperation;
             bool isFunctionContinue = true;
