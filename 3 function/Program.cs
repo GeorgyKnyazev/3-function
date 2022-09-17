@@ -6,31 +6,30 @@ namespace _3_function
     {
         static void Main(string[] args)
         {
-            string userInput;
-
-            Console.Write("Ведите число: ");
-            userInput = Console.ReadLine();
-
-            ConvertToNamber(userInput);
+            ReadingTheNumber();
         }
-        static void ConvertToNamber(string varible)
+
+        static void ReadingTheNumber()
         {
             bool resultOperation;
-            bool continueFunction = true;
+            bool isFunctionContinue = true;
+            string userInput;
 
-            while (continueFunction == true)
+            while (isFunctionContinue == true)
             {
-                resultOperation = int.TryParse(varible, out int result);
+                Console.Write("Ведите число: ");
+                userInput = Console.ReadLine();
+
+                resultOperation = int.TryParse(userInput, out int result);
+
                 if (resultOperation == true)
                 {
                     Console.WriteLine(result);
-                    continueFunction = false;
+                    isFunctionContinue = false;
                 }
                 else 
                 {
                     Console.WriteLine("Вы ввели не число");
-                    Console.Write("Ведите число: ");
-                    varible = Console.ReadLine();
                 }
             }
         }
